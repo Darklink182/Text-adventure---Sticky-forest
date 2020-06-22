@@ -1,5 +1,7 @@
+import os
+
 rooms = {
-    "room1": {
+    "go": { #### go = gameover ####
         "title": "",
         "description": "",      
         "options" : {
@@ -13,7 +15,7 @@ rooms = {
         "title": "",
         "description": "",
         "options" : {
-          "n" : "", 
+          "n" : "go", 
           "o" : "",
           "z" : "",
           "w" : ""
@@ -29,21 +31,24 @@ def showRoom(roomId):
   
   print("")
   currentRoom = rooms[roomId]
-  print(currentRoom["title"])
-  print(currentRoom["description"])
-  roomOptions = currentRoom["options"]
-  print("Enter in what direction you want to move. You can choose from: ")
-  for o in roomOptions:
-    print(o)
+  if currentRoom == rooms["go"] :
+    os.system("python credits.py")
+  else :
+   print(currentRoom["title"])
+   print(currentRoom["description"])
+   roomOptions = currentRoom["options"]
+   print("Enter in what direction you want to move. You can choose from: ")
+   for o in roomOptions:
+     print(o)
 
-  print("Make a choice")
-  optionChosen = input("> ")
-  if optionChosen not in roomOptions.keys():
-    print("You can't go that way!")
-    showRoom(roomId)
+   print("Make a choice")
+   optionChosen = input("> ")
+   if optionChosen not in roomOptions.keys():
+     print("You can't go that way!")
+     showRoom(roomId)
 
-  roomId = roomOptions[optionChosen]
+   roomId = roomOptions[optionChosen]
 
-  showRoom(roomId)
+   showRoom(roomId)
 
-showRoom("room1")
+showRoom("room2")
