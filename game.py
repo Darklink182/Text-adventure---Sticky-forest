@@ -34,21 +34,28 @@ def showRoom(roomId):
   if currentRoom == rooms["go"] :
     os.system("python credits.py")
   else :
-   print(currentRoom["title"])
-   print(currentRoom["description"])
-   roomOptions = currentRoom["options"]
-   print("Enter in what direction you want to move. You can choose from: ")
-   for o in roomOptions:
-     print(o)
+    print(currentRoom["title"])
+    print(currentRoom["description"])
+    roomOptions = currentRoom["options"]
 
-   print("Make a choice")
-   optionChosen = input("> ")
-   if optionChosen not in roomOptions.keys():
-     print("You can't go that way!")
-     showRoom(roomId)
+    i = len(roomOptions)
+    if i > 4 : 
+      print("Enter your direction or action. You can choose from: ")
+      for o in roomOptions:
+        print(o)
+    else:
+      print("Enter in what direction you want to move. You can choose from: ")
+      for o in roomOptions:
+        print(o)
 
-   roomId = roomOptions[optionChosen]
+    print("Make a choice")
+    optionChosen = input("> ")
+    if optionChosen not in roomOptions.keys():
+      print("You can't go that way!")
+      showRoom(roomId)
 
-   showRoom(roomId)
+    roomId = roomOptions[optionChosen]
+
+    showRoom(roomId)
 
 showRoom("room2")
