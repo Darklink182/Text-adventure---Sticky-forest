@@ -33,34 +33,16 @@ for e in range(5):
 
 
 print("To start the game type 'start'")
-print("First time? We advice you to type 'new' before starting!")
+
 
 
 
 while True:
  d = input()
  if d == "start":
-   print("(i) = investigate \
-   (r) = return \
-   (n, s, w, e) = north, south, west, east \
-   (exa) = examine \
-   (exp) = explore \
-   (u) = unlock \
-   (c) = continue ")
    time.sleep(.2)
    os.system("python game.py")
    break
- if d == "new":
-   print(' ')
-   print("(i) = investigate \
-   (r) = return \
-   (n, s, w, e) = north, south, west, east \
-   (exa) = examine \
-   (exp) = explore \
-   (u) = unlock \
-   (c) = continue \
-   You can now type 'start' to begin!")
-   continue
  else:
    print("That's not an option! Try again!")
    continue

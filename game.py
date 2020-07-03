@@ -16,14 +16,14 @@ rooms = {
         "title": "Garden",
         "description": "You decide to store the gem in your backpocket. You look around but you can't find anything more here. Your only option is to return to the front of the cottage.",
         "options" : {
-          "r" : "room13", 
+          "return" : "room13", 
         }
     },
      "cottage-key": { ### item: key ###
         "title": "Attic",
         "description": "You grabbed it getting the feeling that it might be useful. You look around but you can't find anything more here. Your only option is to return downstairs.",
         "options" : {
-          "r" : "room14", 
+          "return" : "room14", 
         }
     },
      "room1": {
@@ -32,7 +32,7 @@ rooms = {
         "options" : {
           "n" : "room2", 
           "w" : "room13",
-          "exa" : "room20"
+          "examine" : "room20"
         }
     },
      "room2": {
@@ -46,16 +46,16 @@ rooms = {
         "title": "Outside Church",
         "description": "After you unlocked the gate and walked into the enclosed space you see a rundown church at the center of the clearing. The church is surprisingly not rundown and all the windows are intact. You can either enter the church or explore the church's surroundings.",
         "options" : {
-          "r" : "room2", 
+          "return" : "room2", 
           "enter" : "room4",
-          "exp" : "room7",
+          "explore" : "room7",
         }
     },
      "room4": {
         "title": "Inside Church",
         "description": "As you enter the church you see that everything is moved out of it. There is only a empty space inside and the floor is clear of any obstacles. You see two doors leading to different places. One to the left of you leads to the balcony and the other at the other side of the church leads to the back of the church.",
         "options" : {
-          "r" : "room3", 
+          "return" : "room3", 
           "balcony" : "room5",
           "backroom" : "room10",
         }
@@ -64,10 +64,8 @@ rooms = {
         "title": "Balcony",
         "description": "You walk up the cramped stairs, when you reached the top of the chairs you see the Balcony from where you can see the church’s floor from an higher viewpoint, on the floor which you couldn’t see when you stood on the ground floor is a pentagram drawn in blood,  Having read to many fictions you get an idea..",
         "options" : {
-          "r" : "room4", 
+          "return" : "room4", 
           "pentagram" : "room6",
-          "z" : "",
-          "w" : ""
         }
     },
      "room6": {
@@ -81,8 +79,8 @@ rooms = {
         "title": "Graveyard",
         "description": "After you walked around the church you reach the graveyard that is located behind the church, you see a graveyard that looks like any other graveyard but the feeling you get from it is different, more mysterious than others. This gets your attention and you decide to look around. You are not afraid of what might lurk in the dark but you are still cautious nonetheless.",
         "options" : {
-          "r" : "room3", 
-          "exa" : "room8",
+          "return" : "room3", 
+          "examine" : "room8",
         }
     },
      "room8": {
@@ -90,46 +88,44 @@ rooms = {
         "description": " You decide to examine the graveyard in better detail, something is telling you to do so, and this feeling has yet to betray you. Following this feeling you see a statue of someone you are somewhat familiar with but you don’t know who. After looking at the statue for sometime you notice that the statue has a note stuck on its back.",
         "options" : {
           "read" : "note", 
-          "r" : "room7",
+          "return" : "room7",
         }
     },
      "note": {
         "title": "Dream",
         "description": "You read the note, the note said read that the statue was of a man named Daan. You recall the name, the name belonged to a man who was well known for his schemes. Knowing who’s grave or whatever this place is you step back, but before you could do anything you blink and the statue is gone, so is the note. And soon after you fall unconscious.",
         "options" : {
-          "wake up" : "room9", 
+          "wake" : "room9", 
         }
     },
      "room9": {
         "title": "Dream",
         "description": "After waking up from what seems like an eternity you see the familiar sign that you walked past at the beginning of entering this forest. You feel around for familiar objects that you collected on your way to the graveyard and they are still there. Nothing feels off so you look around to see if anything's changed, everything is in the same place as you left it, nothing has changed except that when you looked at the central area of the forest that the gate and the church are gone.",
         "options" : {
-          "i" : "room18", 
+          "inspect" : "room18", 
         }
     },
      "room10": {
         "title": "Backroom",
         "description": "You walk across the church to reach the door that leads to the back of the church. When you open the door the door has some resistance but nothing you can't handle. After pushing the door open you hear some boxes fall to the ground. The only thing you see in the backroom are empty boxes with nothing in it, you realise that being in here is a waste of time.",
         "options" : {
-          "r" : "room4", 
+          "return" : "room4", 
         }
     },
      "room11": {
         "title": "Garden",
         "description": "All the plants have been eaten or died out, the part that the plants are eaten isn’t weid, but the pat about them being dead is. Looking closer to see the cause of death you notice the ground has also lost its life, dark and scorched earth.",
         "options" : {
-          "r" : "room13", 
-          "exa" : "room12",
-          "z" : "",
-          "w" : ""
+          "return" : "room13", 
+          "examine" : "room12",
         }
     },
      "room12": {
         "title": "Garden",
-        "description": "You decide to look for the cause of this loss of life, there should be plenty of water accessible here so that is not the case and there are no burn marks on any plants so how can the ground be scorched like that? Whilst investigating you notice something reflecting light into your eyes, you look at it and find a red gem. The shape of the gem looks a bit familiar, but you can't remember from where? Do you put it back (b) down or store (s) it for later?",
+        "description": "You decide to look for the cause of this loss of life, there should be plenty of water accessible here so that is not the case and there are no burn marks on any plants so how can the ground be scorched like that? Whilst investigating you notice something reflecting light into your eyes, you look at it and find a red gem. The shape of the gem looks a bit familiar, but you can't remember from where? Do you put it back down or store it for later?",
         "options" : {
-          "s" : "garden-gem", 
-          "b" : "room11",
+          "store" : "garden-gem", 
+          "throw" : "room11",
         }
     },
      "room13": {
@@ -138,7 +134,7 @@ rooms = {
         "options" : {
           "e" : "room1", 
           "enter" : "room14",
-          "exp" : "room11",
+          "explore" : "room11",
         }
     },
      "room14": {
@@ -146,7 +142,7 @@ rooms = {
         "description": "You decide to force the old door open to enter the cottage, my oh my what will you find?",
         "options" : {
           "leave" : "room13", 
-          "exa" : "room15",
+          "examine" : "room15",
           "ransac" : "room19",
         }
     },
@@ -155,9 +151,7 @@ rooms = {
         "description": "You look closely at the door, examining the rusty lock. The lock is barely intact",
         "options" : {
           "break" : "room16", 
-          "r" : "room14",
-          "z" : "",
-          "w" : ""
+          "return" : "room14",
         }
     },
      "room16": {
@@ -165,15 +159,15 @@ rooms = {
         "description": "The lock is rusty, maybe you can smash it open. You grab a fallen down chair and smash the lock like an idiot. The lock breaks but so does the chair. The door opens and you see stairs leading to the attic",
         "options" : {
           "climb" : "room17", 
-          "r" : "room14",
+          "return" : "room14",
         }
     },
      "room17": {
         "title": "Attic",
         "description": "You walked up the stairs that lead to the attic, once you arrived at the top of the stairs you see a dusty and old attic. Every box is covered in dust and some are webbed by spider webs. After your coughing fit you notice you almost missed a shiny silver box with a key in it. ",
         "options" : {
-          "exp" : "cottage-key", 
-          "r" : "room14",
+          "explore" : "cottage-key", 
+          "return" : "room14",
         }
     },
      "room18": {
@@ -192,7 +186,7 @@ rooms = {
         "title": "Sign",
         "description": "You decide to look closer at the sign, after looking at it you notice something behind it, an overgrown statue that has a gem shape inside it.",
         "options" : {
-          "r" : "room1", 
+          "return" : "room1", 
         }
     },
      "Ingem": {
@@ -217,23 +211,27 @@ def showRoom(roomId):
   print("")
   currentRoom = rooms[roomId]
   if currentRoom == rooms["go"] :
+    
     print("𝔾 𝕒 𝕞 𝕖  𝕠 𝕧 𝕖 𝕣")
     print("You will be directed to the credits screen in a sec!")
     os.system("python credits.py")
   
   if currentRoom == rooms["garden-gem"] :
-    rooms['room20']['options']['place gem'] = 'Ingem'
+    
     print(currentRoom["title"])
     print(currentRoom["description"])
     roomOptions = currentRoom["options"]
+    rooms['room20']['options']['place gem'] = 'Ingem'
 
   if currentRoom == rooms["cottage-key"] :
-    rooms['room2']['options']['u'] = 'room3'
+    
     print(currentRoom["title"])
     print(currentRoom["description"])
     roomOptions = currentRoom["options"]
-  
+    rooms['room2']['options']['unlock'] = 'room3' 
+
   if currentRoom == rooms["room18"] :
+    
     print(currentRoom["title"])
     print(currentRoom["description"])    
     time.sleep(5)
@@ -246,14 +244,17 @@ def showRoom(roomId):
 
     i = len(roomOptions)
     if i > 4 : 
+      print(' ')
       print("Enter your direction or action. You can choose from: ")
       for o in roomOptions:
         print(o)
     else:
+      print(' ')
       print("Enter your direction or action. You can choose from:  ")
       for o in roomOptions:
         print(o)
-
+    
+    print(' ')
     print("Make a choice")
     optionChosen = input("> ")
     if optionChosen not in roomOptions.keys():
